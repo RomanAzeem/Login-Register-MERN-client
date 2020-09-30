@@ -7,6 +7,7 @@ import { loginUser } from '../redux/actions/userAction';
 const Login = ({ user, loginUser }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   const history = useHistory();
 
   const handleSubmit = (e) => {
@@ -15,11 +16,7 @@ const Login = ({ user, loginUser }) => {
       email,
       password,
     };
-    loginUser(password);
-
-    {
-      user.success && alert(user.name);
-    }
+    loginUser(userData);
   };
 
   return (
